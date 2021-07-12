@@ -23,7 +23,7 @@ Switch.prototype.getServices = function () {
         .on('set', function (value, callback) {
             plugin.log("Switch -> " + value);
 
-            command = "python3 /home/pi/magicswitchbot/magicswitchbot-push.py"
+            command = "python3 " + __dirname + "/magicswitchbot-push.py"
             exec(command)
 
             callback();
